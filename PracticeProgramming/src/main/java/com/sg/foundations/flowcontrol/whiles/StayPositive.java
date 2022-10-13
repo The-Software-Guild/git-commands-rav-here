@@ -10,4 +10,13 @@ package com.sg.foundations.flowcontrol.whiles;
  */
 public class StayPositive {
     
+    public static void main(String[] args) {
+        int start = 10;
+        System.out.println("Counting down...");
+        while (start >= 0) {
+            System.out.println(start);
+            start = start-1;
+        }
+        System.out.println("Blast off!");
+    }
 }
