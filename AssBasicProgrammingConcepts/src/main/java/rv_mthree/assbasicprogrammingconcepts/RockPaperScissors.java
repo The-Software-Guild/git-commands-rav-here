@@ -76,6 +76,9 @@ public class RockPaperScissors {
             else if (compWin < userWin) {
                 System.out.println("You! Lucky...");
             }
+            else { 
+                System.out.println("No one!");
+            }
             // play again?
             System.out.println("That was fun! Want to play again?");
             
