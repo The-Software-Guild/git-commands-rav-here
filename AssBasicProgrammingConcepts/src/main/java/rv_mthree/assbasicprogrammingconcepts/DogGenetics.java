@@ -42,7 +42,7 @@ public class DogGenetics {
         System.out.println(d +"% Common Cur");
         System.out.println(e +"% King Doberman");
         System.out.println("Thats quite the dog!");
-        System.out.println(a+b+c+d+e);
+        System.out.println(a+b+c+d+e +"% awesome!");
     }
     
 }
