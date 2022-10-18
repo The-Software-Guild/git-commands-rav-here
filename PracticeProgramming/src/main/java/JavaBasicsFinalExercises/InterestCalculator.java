@@ -43,7 +43,7 @@ public class InterestCalculator {
             // calculate interest earned 
             double E = 0;
             for (int j=1; j<4+1; j++) { // for each quarter
-                double k = 2.5; // define fixed quarterly rate
+                double k = IR/4; // define fixed quarterly rate
                 double newPA = PA * (1+(k/100)); // find new amount at quarter end
                 E += newPA - PA; // calculate earnings for that quarter and add to E
                 PA = newPA; // redefine principal
