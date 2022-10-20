@@ -19,6 +19,7 @@ public class RockPaperScissors {
         // initialise scanner
         Scanner inputReader = new Scanner(System.in);
         
+        // begin do loop for game setup and play
         do {
             System.out.println("How many rounds do you want to play?");
             
@@ -30,12 +31,12 @@ public class RockPaperScissors {
             // start game
             System.out.println("Let's go!");
         
-        
+            // initialise counters
             int Ties = 0;
             int userWin = 0;
             int compWin = 0;
 
-            // for loop for game
+            // for loop for games, depending on the number of rounds asked for
             for (int i=1; i<Rounds+1; i++) {
                 // get players choice
                 System.out.println("Choose a number: 1.Rock, 2.Paper, or 3.Scissors?");
@@ -49,26 +50,27 @@ public class RockPaperScissors {
                 // determine variable to aid results calculation
                 int R = comChoice - userChoice;
 
-                // result of tie
+                // if result is a tie, add one to tie count
                 if (R == 0) {
                     System.out.println("Round " + i + " Tie.");
                     Ties += 1;
                 }
-                // result of rock vs paper
+                // if result is a computer win, add one to compWin
                 else if (R == 1) {
                     System.out.println("Round " + i + " the computer wins.");
                     compWin += 1;
-                }
+                } // if result is a user win, add one to userWin
                 else {
                     System.out.println("Round " + i + " you win.");
                     userWin += 1;
                 }
 
             }
+            // announce game end and display counter results
             System.out.println("Game over! and the results are...");
             System.out.println("Ties: " + Ties + ", User wins: " + userWin + ", Computer wins: " + compWin);
             System.out.println("So the winner is...");
-            // determine winner 
+            // determine winner of the over all games
             if (compWin > userWin) {
                 System.out.println("The computer, haha!");
             }
@@ -79,13 +81,13 @@ public class RockPaperScissors {
             else { 
                 System.out.println("No one!");
             }
-            // play again?
+            // ask user if they want to play again
             System.out.println("That was fun! Want to play again?");
             
-        }    
+        } // while the users answer to playing again is yes, do the above do loop for the game   
         while ((inputReader.nextLine()).equals("Yes"));
     
-// goodbye message
+    // goodbye message
     System.out.println("Thanks for playing!");
 
     }
